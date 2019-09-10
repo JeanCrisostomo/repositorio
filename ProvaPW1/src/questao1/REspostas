@@ -1,0 +1,35 @@
+1.1 Nenhuma pode ser final, pois é possível ter tipos de editoras, tipos de 
+autores e tipos de livros
+
+1.2 public abstract class Publicacao{...}
+    private static int contador;
+
+1.3 Não, se ele é estático não pode ser abstrato.
+    public abstract int getContator();
+
+1.4 private static final int NUM_MAX_OBJ = 10;
+
+1.5 public class Livro extends Publicacao;
+
+1.6 private Editora editora;
+
+1.7 private List<Autor> autores;
+
+1.8 public String toString() {
+        String aux = "Editora não cadastrada!";
+        if(this.editora!=null) aux = this.editora.toString();
+        return "Publicacao{" + "ano=" + ano + 
+                ", pais=" + pais + aux + '}';
+    }
+
+1.9 public String toString() {
+        String aux = "Autores não cadastrados!";
+        if(autores != null){
+            aux = "";
+            for (Autor autor : autores) {
+                aux += autor.toString();
+            }
+        }
+        return super.toString() + " isbn=" + isbn + " autores=" + aux + '}';
+    }
+
